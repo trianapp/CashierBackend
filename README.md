@@ -3,6 +3,20 @@ BackendCashierApp
 
 ![image](./docs/db_diagram.png)
 
+# Feature
+1. Login  
+    - email ,password
+    - google 
+3. Register
+    - google
+    - email,password
+4. Create Store
+    - Create Branch(for first auto generate main branch)
+    - Update Branch
+    - Delete Branch
+   
+
+
 # Getting Started
 
 ### Reference Documentation
