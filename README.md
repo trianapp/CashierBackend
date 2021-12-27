@@ -3,6 +3,9 @@ BackendCashierApp
 
 ![image](./docs/db_diagram.png)
 
+Ref
+https://dbdiagram.io/d/61c9bf203205b45b73ce0d6b
+
 # Feature
 1. Login  
     - email ,password
