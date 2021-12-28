@@ -1,10 +1,16 @@
 # CashierBackend
 BackendCashierApp
 
-![image](./docs/DB.png)
+![image](./docs/db_diagram.png)
 
 Ref
 https://dbdiagram.io/d/61c9bf203205b45b73ce0d6b
+
+# Client
+1. Desktop Cashier
+2. Mobile Cashier
+3. Mobile User/Owner
+4. Website Admin
 
 # Feature
 1. User
