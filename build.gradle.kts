@@ -17,7 +17,7 @@ repositories {
     mavenCentral()
 }
 
-extra["snippetsDir"] = file("build/generated-snippets")
+//extra["snippetsDir"] = file("build/generated-snippets")
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
@@ -44,7 +44,8 @@ tasks.withType<Test> {
 }
 
 tasks.test {
-  //  outputs.dir(snippetsDir)
+    val snippetsDir = file("build/generated-snippets")
+    outputs.dir(snippetsDir)
 }
 
 

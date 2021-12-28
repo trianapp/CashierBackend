@@ -1,8 +1,82 @@
 # CashierBackend
 BackendCashierApp
 
-![image](./docs/db_diagram.png)
+![image](./docs/DB.png)
 
+Ref
+https://dbdiagram.io/d/61c9bf203205b45b73ce0d6b
+
+# Feature
+1. User
+   - Auth
+      - User Login With email and password/username and password
+      - User register with email or google
+      - User Login with Google
+      - User Reset Password with email
+   - Store
+      - Create Store for first time(1 user can create only 1 store)
+      - Update Store 
+      - Create Branch(auto create when create store in first time)
+      - Update Branch
+   - Supplier (store have 2 type 1. must stock product from supplier(ex retail) 2. store that no need purchase from supplier (ex restaurant))
+      - Add new Supplier
+      - Edit Supplier
+      - Delete Supplier
+   - Product
+      - Edit Product 
+      - Add New Product 
+      - Delete Product
+2. Employee
+   - Auth
+      - Login
+      - Reset Password
+   - Product
+      - Edit Product
+      - Add New Product
+      - Delete Product
+      - Purchase Product from suppliers(update stock product)
+   - Supplier(store have 2 type 1. must stock product from supplier(ex retail) 2. store that no need purchase from supplier (ex restaurant))
+      - Add new Supplier
+      - Edit Supplier
+   - Order
+      - Sale Product to customer(update stock)
+      - Add Costumer
+3. Dev
+    - Auth
+        - Login
+    - Employee Position
+        - Add new Position
+    - Product Category
+        - Add new Category
+
+# Service Design
+1. Login
+   - email ,password
+   - google
+3. Register
+   - google
+   - email,password
+4. Create Store
+   - Create Branch(for first auto generate main branch)
+   - Update Branch
+   - Delete Branch
+5. Employees
+   - Add employee to branch
+   - edit employee
+   -
+
+6. Products
+   - add new product
+   - purchase
+      - update stock
+
+   - sale
+      - update stock
+7. Orders
+   - order
+      - payment
+   - hold order
+8.
 # Getting Started
 
 ### Reference Documentation
