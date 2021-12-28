@@ -37,24 +37,39 @@ https://dbdiagram.io/d/61c9bf203205b45b73ce0d6b
 
 # Flow
 1. User
-   - User Login -> Update Store -> Add Branch
-   - User register -> Create Store -> Add Branch
-   - User Login -> Branch ->Add Employee
-   - User Reset Password -> Check Email
-   - Add new Supplier
-   - Edit Supplier
-   - Edit Product 
-   - Add New Product 
-   - Delete Product
+   - Auth
+      - User Login 
+      - User register 
+      - User Login 
+      - User Reset Password 
+   - Store
+      - Create Store
+      - Update Store
+      - Create Branch
+      - Update Branch
+   - Supplier
+      - Add new Supplier
+      - Edit Supplier
+      - Delete Supplier
+   - Product
+      - Edit Product 
+      - Add New Product 
+      - Delete Product
 2. Employee
-   - Login
-   - Purchase Product from suppliers
-   - Add new Supplier
-   - Edit Supplier
-   - Edit Product
-   - Add New Product
-   - Delete Product
-   - Sale Product to customer
+   - Auth
+      - Login
+      - Reset Password
+   - Product
+      - Purchase Product from suppliers
+      - Edit Product
+      - Add New Product
+      - Delete Product
+   - Supplier
+      - Add new Supplier
+      - Edit Supplier
+   - Order
+      - Sale Product to customer
+      - 
 
 # Getting Started
 
