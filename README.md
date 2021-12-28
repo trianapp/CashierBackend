@@ -1,7 +1,7 @@
 # CashierBackend
 BackendCashierApp
 
-![image](./docs/db_diagram.png)
+![image](./docs/DB.png)
 
 Ref
 https://dbdiagram.io/d/61c9bf203205b45b73ce0d6b
@@ -34,6 +34,27 @@ https://dbdiagram.io/d/61c9bf203205b45b73ce0d6b
         - payment
     - hold order
 8. 
+
+# Flow
+1. User
+   - User Login -> Update Store -> Add Branch
+   - User register -> Create Store -> Add Branch
+   - User Login -> Branch ->Add Employee
+   - User Reset Password -> Check Email
+   - Add new Supplier
+   - Edit Supplier
+   - Edit Product 
+   - Add New Product 
+   - Delete Product
+2. Employee
+   - Login
+   - Purchase Product from suppliers
+   - Add new Supplier
+   - Edit Supplier
+   - Edit Product
+   - Add New Product
+   - Delete Product
+   - Sale Product to customer
 
 # Getting Started
 
