@@ -18,8 +18,8 @@ https://dbdiagram.io/d/61c9bf203205b45b73ce0d6b
     - Update Branch
     - Delete Branch
 5. Employees
-    - Add employe to branch
-    - edit employe
+    - Add employee to branch
+    - edit employee
     - 
    
 6. Products
@@ -38,16 +38,16 @@ https://dbdiagram.io/d/61c9bf203205b45b73ce0d6b
 # Flow
 1. User
    - Auth
-      - User Login 
-      - User register 
-      - User Login 
-      - User Reset Password 
+      - User Login With email and password/username and password
+      - User register with email or google
+      - User Login with Google
+      - User Reset Password with email
    - Store
-      - Create Store
-      - Update Store
-      - Create Branch
+      - Create Store for first time(1 user can create only 1 store)
+      - Update Store 
+      - Create Branch(auto create when create store in first time)
       - Update Branch
-   - Supplier
+   - Supplier (store have 2 type 1. must stock product from supplier(ex retail) 2. store that no need purchase from supplier (ex restaurant))
       - Add new Supplier
       - Edit Supplier
       - Delete Supplier
@@ -60,16 +60,16 @@ https://dbdiagram.io/d/61c9bf203205b45b73ce0d6b
       - Login
       - Reset Password
    - Product
-      - Purchase Product from suppliers
       - Edit Product
       - Add New Product
       - Delete Product
-   - Supplier
+      - Purchase Product from suppliers(update stock product)
+   - Supplier(store have 2 type 1. must stock product from supplier(ex retail) 2. store that no need purchase from supplier (ex restaurant))
       - Add new Supplier
       - Edit Supplier
    - Order
-      - Sale Product to customer
-      - 
+      - Sale Product to customer(update stock)
+      - Add Costumer
 
 # Getting Started
 
