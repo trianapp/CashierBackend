@@ -17,8 +17,23 @@ https://dbdiagram.io/d/61c9bf203205b45b73ce0d6b
     - Create Branch(for first auto generate main branch)
     - Update Branch
     - Delete Branch
+5. Employees
+    - Add employe to branch
+    - edit employe
+    - 
    
-
+6. Products
+    - add new product
+    - purchase
+        - update stock
+        
+    - sale
+        - update stock
+7. Orders
+    - order
+        - payment
+    - hold order
+8. 
 
 # Getting Started
 
