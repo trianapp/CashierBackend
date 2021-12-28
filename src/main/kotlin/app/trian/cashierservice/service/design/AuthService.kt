@@ -14,6 +14,8 @@ interface AuthService {
 
     fun register()
 
+    fun registerProvider()
+
     fun resetPassword()
 
 }

@@ -9,14 +9,16 @@ package app.trian.cashierservice.service.design
 interface StoreService {
     fun createNewStore()
 
-    fun addNewBranchStore()
-
     fun updateStore()
+
+    fun deleteStore()
+
+    fun addNewBranchStore()
 
     fun updateBranchStore()
 
     fun deleteBranchStore()
 
-    fun deleteStore()
+
 
 }
