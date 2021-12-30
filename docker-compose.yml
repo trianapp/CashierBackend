@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  mysql_cashier:
+    image: mysql:8
+    ports:
+      - 3306:3306
+    volumes:
+      - ~/apps/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=trian
+      - MYSQL_PASSWORD=trian
+      - MYSQL_USER=triandamai
+      - MYSQL_DATABASE=cashier
