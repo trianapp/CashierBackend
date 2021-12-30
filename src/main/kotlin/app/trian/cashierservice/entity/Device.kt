@@ -15,5 +15,6 @@ data class Device(
     var storeBranch:StoreBranch?=null,
     @Column
     var createdAt:Long,
+    @Column
     var updatedAt:Long
 )

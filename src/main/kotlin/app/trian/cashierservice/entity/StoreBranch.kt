@@ -15,15 +15,11 @@ data class StoreBranch(
     @JoinColumn(name = "StoreID")
     var store: Store,
     @OneToMany(
-        mappedBy = "DeviceID",
+        mappedBy = "storeBranch",
         fetch = FetchType.EAGER,
         cascade = [CascadeType.ALL]
     )
-    @Fetch(
-        value = FetchMode.SUBSELECT
-    )
-    @JsonIgnore
-    var devices:List<Device> = emptyList(),
+    var employees: List<Employees> = emptyList(),
     @Column
     var branchType:String,
     @Column

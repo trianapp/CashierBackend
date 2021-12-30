@@ -7,7 +7,7 @@ import javax.persistence.*
 data class Invoices(
     @Id
     var InvoiceID:Long,
-    @OneToMany
+    @ManyToOne
     var order:Orders,
     @Column
     var invoiceDate:String,

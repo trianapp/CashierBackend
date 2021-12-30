@@ -9,6 +9,9 @@ data class OrderLines(
     @GeneratedValue
     var OrderLineID:Long,
     @ManyToOne
+    @JoinColumn(
+        name = "orderLines"
+    )
     var orders: Orders,
     @ManyToOne
     var products: Products,

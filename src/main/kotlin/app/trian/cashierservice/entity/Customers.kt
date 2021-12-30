@@ -1,5 +1,6 @@
 package app.trian.cashierservice.entity
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import javax.persistence.*
 
 @Entity
@@ -9,6 +10,13 @@ data class Customers(
     @Id
     @Column
     var CustomerID:Long=0,
+    @OneToMany(
+        mappedBy = "customers",
+        fetch = FetchType.EAGER,
+        cascade = [CascadeType.ALL]
+    )
+    @JsonIgnore
+    var orders:List<Orders> = emptyList(),
     @Column
     var companyName:String,
     @Column

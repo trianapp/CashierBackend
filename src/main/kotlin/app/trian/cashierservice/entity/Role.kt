@@ -9,14 +9,6 @@ data class Role(
     @Id
     @GeneratedValue
     var RoleID:Long,
-    @OneToMany(
-        mappedBy = "UserID",
-        fetch = FetchType.EAGER,
-        cascade = [CascadeType.ALL]
-    )
-    @JoinColumn
-    @JsonIgnore
-    var users:List<User> = emptyList(),
     @Column
     var role:String,
     @Column

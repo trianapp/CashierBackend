@@ -9,7 +9,7 @@ data class ProductSuppliers(
     @GeneratedValue
     var ProductSupplierID:Long,
     @ManyToOne
-    var products: Products,
+    var product: Products,
     @ManyToOne
     var suppliers: Suppliers,
     @Column

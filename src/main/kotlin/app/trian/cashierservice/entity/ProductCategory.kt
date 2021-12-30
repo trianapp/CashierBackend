@@ -1,5 +1,6 @@
 package app.trian.cashierservice.entity
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import javax.persistence.*
 
 @Entity

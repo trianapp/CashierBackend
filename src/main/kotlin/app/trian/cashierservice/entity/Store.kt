@@ -1,5 +1,6 @@
 package app.trian.cashierservice.entity
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import javax.persistence.*
 
 @Entity
@@ -13,6 +14,7 @@ data class Store(
         mappedBy = "StoreBranchID",
         cascade = [CascadeType.ALL]
     )
+    @JsonIgnore
     var branchLList: List<StoreBranch> = emptyList(),
     @Column
     var storeName:String,

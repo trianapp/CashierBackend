@@ -8,8 +8,20 @@ data class Products(
     @Id
     @GeneratedValue
     var ProductID:Long,
-    @OneToOne
+    @ManyToOne(
+        fetch = FetchType.EAGER,
+        cascade = [CascadeType.ALL]
+    )
+    @JoinColumn(name = "ProductCategoryID")
     var category: ProductCategory,
+    @OneToMany(
+        mappedBy = "product",
+        fetch = FetchType.EAGER,
+        cascade = [CascadeType.ALL]
+    )
+    var productSuppliers:List<ProductSuppliers> = emptyList(),
+    @OneToOne
+    var productDetails: ProductDetails,
     @Column
     var productSupplier:String,
     @Column
