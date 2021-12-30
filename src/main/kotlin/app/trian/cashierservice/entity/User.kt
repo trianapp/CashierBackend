@@ -1,5 +1,6 @@
 package app.trian.cashierservice.entity
 
+import app.trian.cashierservice.model.UserType
 import javax.persistence.*
 
 @Entity
@@ -22,6 +23,8 @@ data class User(
     var password:String,
     @Column
     var email:String,
+    @Column
+    var type:UserType,
     @Column
     var createdAt:Long,
     @Column

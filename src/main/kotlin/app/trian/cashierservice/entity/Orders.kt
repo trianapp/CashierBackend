@@ -1,5 +1,6 @@
 package app.trian.cashierservice.entity
 
+import app.trian.cashierservice.model.OrderStatus
 import com.fasterxml.jackson.annotation.JsonIgnore
 import javax.persistence.*
 
@@ -8,25 +9,33 @@ import javax.persistence.*
 data class Orders(
     @Id
     var OrderID:Long,
-    @ManyToOne
+    @ManyToOne(
+        fetch = FetchType.EAGER,
+        cascade = [CascadeType.ALL]
+    )
+    @JoinColumn(name = "EmployeeID")
     var employees: Employees,
-    @ManyToOne
+    @ManyToOne(
+        fetch = FetchType.EAGER,
+        cascade = [CascadeType.ALL]
+    )
+    @JoinColumn(name = "CustomerID")
     var customers: Customers,
     @OneToMany(
         mappedBy = "orders",
-        fetch = FetchType.EAGER,
         cascade = [CascadeType.ALL]
     )
     @JsonIgnore
     var orderLines:List<OrderLines> = emptyList(),
+
     @OneToMany(
         mappedBy = "order",
-        fetch = FetchType.EAGER,
         cascade = [CascadeType.ALL]
     )
+    @JsonIgnore
     var invoices:List<Invoices> = emptyList(),
     @Column
-    var orderStatus:String,
+    var orderStatus:OrderStatus,
     @Column
     var createdAt:Long,
     @Column

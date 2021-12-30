@@ -8,12 +8,17 @@ data class OrderLines(
     @Id
     @GeneratedValue
     var OrderLineID:Long,
-    @ManyToOne
-    @JoinColumn(
-        name = "orderLines"
+    @ManyToOne(
+        fetch = FetchType.EAGER,
+        cascade = [CascadeType.ALL]
     )
+    @JoinColumn(name = "OrderID")
     var orders: Orders,
-    @ManyToOne
+    @ManyToOne(
+        fetch = FetchType.EAGER,
+        cascade = [CascadeType.ALL]
+    )
+    @JoinColumn(name = "ProductID")
     var products: Products,
     @Column
     var quantity:Int,

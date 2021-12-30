@@ -11,7 +11,10 @@ data class StoreBranch(
     @Id
     @GeneratedValue
     var StoreBranchID:Long,
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(
+        fetch = FetchType.EAGER,
+        cascade = [CascadeType.ALL]
+    )
     @JoinColumn(name = "StoreID")
     var store: Store,
     @OneToMany(

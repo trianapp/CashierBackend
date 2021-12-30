@@ -1,5 +1,6 @@
 package app.trian.cashierservice.entity
 
+import app.trian.cashierservice.model.EmployeeType
 import com.fasterxml.jackson.annotation.JsonIgnore
 import javax.persistence.*
 
@@ -9,13 +10,19 @@ data class Employees(
     @Id
     @GeneratedValue
     var EmployeeID:Long,
-    @ManyToOne
+    @ManyToOne(
+        fetch = FetchType.EAGER,
+        cascade = [CascadeType.ALL]
+    )
     @JoinColumn(name = "EmployeePositionID")
     var position: EmployeePosition,
     @OneToOne
     @JoinColumn(name = "UserID")
     var user: User,
-    @ManyToOne
+    @ManyToOne(
+        fetch = FetchType.EAGER,
+        cascade = [CascadeType.ALL]
+    )
     @JoinColumn(name = "StoreBranchID")
     var storeBranch: StoreBranch,
     @OneToOne
@@ -34,6 +41,8 @@ data class Employees(
     var lastName:String,
     @Column
     var photo:String,
+    @Column
+    var type:EmployeeType,
     @Column
     var createdAt:Long,
     @Column

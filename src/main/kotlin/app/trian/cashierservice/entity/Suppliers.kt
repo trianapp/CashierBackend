@@ -13,7 +13,6 @@ data class Suppliers(
         fetch = FetchType.EAGER,
         cascade = [CascadeType.ALL]
     )
-    @JoinColumn
     var productSuppliers: List<ProductSuppliers> = emptyList(),
     @Column
     var companyName:String,

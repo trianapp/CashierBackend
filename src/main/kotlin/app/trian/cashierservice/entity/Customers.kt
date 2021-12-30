@@ -1,10 +1,11 @@
 package app.trian.cashierservice.entity
 
+import app.trian.cashierservice.model.CustomerType
 import com.fasterxml.jackson.annotation.JsonIgnore
 import javax.persistence.*
 
 @Entity
-@Table(name = "Customers")
+@Table
 data class Customers(
     @GeneratedValue
     @Id
@@ -32,7 +33,7 @@ data class Customers(
     @Column
     var phone:String,
     @Column
-    var type:String,
+    var type:CustomerType,
     @Column
     var createdAt:Long,
     @Column

@@ -8,9 +8,17 @@ data class ProductSuppliers(
     @Id
     @GeneratedValue
     var ProductSupplierID:Long,
-    @ManyToOne
+    @ManyToOne(
+        fetch = FetchType.EAGER,
+        cascade = [CascadeType.ALL]
+    )
+    @JoinColumn(name = "ProductID")
     var product: Products,
-    @ManyToOne
+    @ManyToOne(
+        fetch = FetchType.EAGER,
+        cascade = [CascadeType.ALL]
+    )
+    @JoinColumn(name = "SupplierID")
     var suppliers: Suppliers,
     @Column
     var notes:String,
