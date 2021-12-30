@@ -5,10 +5,10 @@ services:
     image: mysql:8
     ports:
       - 3306:3306
-    volumes:
-      - ~/apps/mysql:/var/lib/mysql
+#    volumes:
+#      - ~/apps/mysql:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=S3cret
-      - MYSQL_PASSWORD=An0thrS3crt
-      - MYSQL_USER=citizix_user
+      - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=db_cashier
+      - MYSQL_USER=trian-user
+      - MYSQL_PASSWORD=password
