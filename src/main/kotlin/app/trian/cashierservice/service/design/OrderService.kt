@@ -1,5 +1,9 @@
 package app.trian.cashierservice.service.design
 
+import app.trian.cashierservice.model.request.OrderRequest
+import app.trian.cashierservice.model.response.BaseResponse
+import app.trian.cashierservice.model.response.OrderResponse
+
 /**
  * OrderService
  * Created By Trian Damai
@@ -7,15 +11,15 @@ package app.trian.cashierservice.service.design
  * Created At 28/12/21 13.43
  */
 interface OrderService {
-    fun getListOrder()
+    fun getListOrder():BaseResponse<List<OrderResponse>>
 
-    fun getDetailOrderById()
+    fun getDetailOrderById():BaseResponse<OrderResponse>
 
-    fun addNewOrder()
+    fun addNewOrder(request:OrderRequest):BaseResponse<OrderResponse>
 
-    fun holdOrder()
+    fun holdOrder(orderID: Long):BaseResponse<OrderResponse>
 
-    fun editOrder()
+    fun editOrder(request:OrderRequest):BaseResponse<OrderResponse>
 
-    fun deleteOrder()
+    fun deleteOrder(orderID:Long):BaseResponse<OrderResponse>
 }

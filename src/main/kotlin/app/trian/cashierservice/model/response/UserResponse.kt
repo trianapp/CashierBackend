@@ -1,3 +1,3 @@
 package app.trian.cashierservice.model.response
 
-data class RegisterResponse(var username:String)
+data class UserResponse(var username:String)
