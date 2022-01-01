@@ -1,18 +1,18 @@
 package app.trian.cashierservice.entity
 
-import com.fasterxml.jackson.annotation.JsonIgnore
 import javax.persistence.*
 
 @Entity
 @Table
-data class Role(
+data class Devices(
     @Id
     @GeneratedValue
-    var RoleID:Long,
+    var DeviceID:Long,
     @Column
-    var role:String,
-    @Column
-    val description:String,
+    var mac:String,
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "StoreBranchID")
+    var storeBranch:StoreBranch?=null,
     @Column
     var createdAt:Long,
     @Column

@@ -5,7 +5,7 @@ import javax.persistence.*
 
 @Entity
 @Table
-data class User(
+data class Users(
     @Id
     @GeneratedValue
     var UserID:Long,
@@ -14,7 +14,7 @@ data class User(
         cascade = [CascadeType.ALL]
     )
     @JoinColumn(name = "RoleID")
-    var role:Role,
+    var role:Roles,
     @Column
     var uid:String,
     @Column

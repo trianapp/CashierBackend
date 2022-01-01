@@ -18,7 +18,7 @@ data class Employees(
     var position: EmployeePosition,
     @OneToOne
     @JoinColumn(name = "UserID")
-    var user: User,
+    var user: Users,
     @ManyToOne(
         fetch = FetchType.EAGER,
         cascade = [CascadeType.ALL]
