@@ -1,5 +1,6 @@
 package app.trian.cashierservice.config
 
+import app.trian.cashierservice.repository.ApikeyRepository
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
@@ -19,15 +20,16 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource
 @Configuration
 @EnableWebSecurity
 class CrossOriginConfiguration(
-    private val filerExceptionHandler: FilterChainExceptionHandler
+    private val filerExceptionHandler: FilterChainExceptionHandler,
+    private val apikeyRepository: ApikeyRepository
 ) :WebSecurityConfigurerAdapter(){
 
     override fun configure(http: HttpSecurity) {
        // super.configure(http)
         val apiKeyAuthFilter = ApiKeyAuthFilter("x-api-key")
-        apiKeyAuthFilter.setAuthenticationManager(ApiKeyAuthManager())
+        apiKeyAuthFilter.setAuthenticationManager(ApiKeyAuthManager(apikeyRepository))
         http
-            .addFilterBefore(filerExceptionHandler,LogoutFilter::class.java)
+            .addFilterAfter(filerExceptionHandler,LogoutFilter::class.java)
             .csrf()
             .disable()
             .sessionManagement()

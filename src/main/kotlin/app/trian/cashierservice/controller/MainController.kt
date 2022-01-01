@@ -1,5 +1,6 @@
 package app.trian.cashierservice.controller
 
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
 /**
@@ -10,4 +11,8 @@ import org.springframework.web.bind.annotation.RestController
  */
 @RestController
 class MainController {
+    @GetMapping
+    fun mainRoute(): Map<String, String> {
+        return mapOf("a" to "b")
+    }
 }
