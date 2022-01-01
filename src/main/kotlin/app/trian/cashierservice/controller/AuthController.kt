@@ -26,14 +26,14 @@ class AuthController {
     fun registerBasic() = "Login"
 
     @PostMapping(
-        value = ["api/v1/login"],
+        value = ["api/v1/login/provider"],
         consumes = ["application/json"],
         produces = ["application/json"]
     )
     fun loginProvider() = "Login"
 
     @PostMapping(
-        value = ["api/v1/register"],
+        value = ["api/v1/register/provider"],
         consumes = ["application/json"],
         produces = ["application/json"]
     )
