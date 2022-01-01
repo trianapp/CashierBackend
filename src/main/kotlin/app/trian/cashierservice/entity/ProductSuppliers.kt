@@ -13,13 +13,13 @@ data class ProductSuppliers(
         cascade = [CascadeType.ALL]
     )
     @JoinColumn(name = "ProductID")
-    var product: Products,
+    var product: Products?,
     @ManyToOne(
         fetch = FetchType.EAGER,
         cascade = [CascadeType.ALL]
     )
     @JoinColumn(name = "SupplierID")
-    var suppliers: Suppliers,
+    var suppliers: Suppliers?,
     @Column
     var notes:String,
     @Column

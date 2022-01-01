@@ -12,7 +12,7 @@ data class Devices(
     var mac:String,
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "StoreBranchID")
-    var storeBranch:StoreBranch?=null,
+    var storeBranch:StoreBranch?,
     @Column
     var createdAt:Long,
     @Column

@@ -9,7 +9,7 @@ data class Payment(
     @GeneratedValue
     var PaymentID:Long,
     @OneToOne
-    var order:Orders,
+    var order:Orders?,
     @Column
     var paymentMethod:String,
     @Column

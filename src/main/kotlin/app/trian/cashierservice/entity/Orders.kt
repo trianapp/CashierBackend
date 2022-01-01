@@ -14,13 +14,13 @@ data class Orders(
         cascade = [CascadeType.ALL]
     )
     @JoinColumn(name = "EmployeeID")
-    var employees: Employees,
+    var employees: Employees?,
     @ManyToOne(
         fetch = FetchType.EAGER,
         cascade = [CascadeType.ALL]
     )
     @JoinColumn(name = "CustomerID")
-    var customers: Customers,
+    var customers: Customers?,
     @OneToMany(
         mappedBy = "orders",
         cascade = [CascadeType.ALL]

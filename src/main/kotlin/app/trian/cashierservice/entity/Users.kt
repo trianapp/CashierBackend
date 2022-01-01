@@ -14,7 +14,7 @@ data class Users(
         cascade = [CascadeType.ALL]
     )
     @JoinColumn(name = "RoleID")
-    var role:Roles,
+    var role:Roles?,
     @Column
     var uid:String,
     @Column

@@ -15,16 +15,16 @@ data class Employees(
         cascade = [CascadeType.ALL]
     )
     @JoinColumn(name = "EmployeePositionID")
-    var position: EmployeePosition,
+    var position: EmployeePosition?,
     @OneToOne
     @JoinColumn(name = "UserID")
-    var user: Users,
+    var user: Users?,
     @ManyToOne(
         fetch = FetchType.EAGER,
         cascade = [CascadeType.ALL]
     )
     @JoinColumn(name = "StoreBranchID")
-    var storeBranch: StoreBranch,
+    var storeBranch: StoreBranch?,
     @OneToOne
     @JoinColumn(name="EmployeeID")
     var reportTo:Employees?,
