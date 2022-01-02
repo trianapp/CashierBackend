@@ -8,7 +8,7 @@ enum class StatusResponse {
     DENIED,
     BAD_REQUEST,
     TIMEOUT,
-    NO_FOUND,
+    NO_FOUND
 }
 const val HTTP_OK =200
 const val HTTP_CREATED = 201
