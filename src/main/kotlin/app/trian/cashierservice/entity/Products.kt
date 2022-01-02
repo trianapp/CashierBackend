@@ -13,7 +13,7 @@ data class Products(
         cascade = [CascadeType.ALL]
     )
     @JoinColumn(name = "ProductCategoryID")
-    var category: ProductCategory,
+    var category: ProductCategory?,
     @OneToMany(
         mappedBy = "product",
         fetch = FetchType.EAGER,
@@ -21,7 +21,7 @@ data class Products(
     )
     var productSuppliers:List<ProductSuppliers> = emptyList(),
     @OneToOne
-    var productDetails: ProductDetails,
+    var productDetails: ProductDetails?,
     @Column
     var productSupplier:String,
     @Column

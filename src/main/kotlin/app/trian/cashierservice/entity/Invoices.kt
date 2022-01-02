@@ -8,7 +8,7 @@ data class Invoices(
     @Id
     var InvoiceID:Long,
     @ManyToOne
-    var order:Orders,
+    var order:Orders?,
     @Column
     var invoiceDate:String,
     @Column

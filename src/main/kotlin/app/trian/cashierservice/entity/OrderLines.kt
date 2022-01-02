@@ -13,13 +13,13 @@ data class OrderLines(
         cascade = [CascadeType.ALL]
     )
     @JoinColumn(name = "OrderID")
-    var orders: Orders,
+    var orders: Orders?,
     @ManyToOne(
         fetch = FetchType.EAGER,
         cascade = [CascadeType.ALL]
     )
     @JoinColumn(name = "ProductID")
-    var products: Products,
+    var products: Products?,
     @Column
     var quantity:Int,
     @Column

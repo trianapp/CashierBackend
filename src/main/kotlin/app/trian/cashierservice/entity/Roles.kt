@@ -4,15 +4,14 @@ import javax.persistence.*
 
 @Entity
 @Table
-data class Device(
+data class Roles(
     @Id
     @GeneratedValue
-    var DeviceID:Long,
+    var RoleID:Long,
     @Column
-    var mac:String,
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "StoreBranchID")
-    var storeBranch:StoreBranch?=null,
+    var role:String,
+    @Column
+    val description:String,
     @Column
     var createdAt:Long,
     @Column

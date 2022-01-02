@@ -1,5 +1,6 @@
 package app.trian.cashierservice.entity
 
+import app.trian.cashierservice.model.StoreBranchType
 import com.fasterxml.jackson.annotation.JsonIgnore
 import org.hibernate.annotations.Fetch
 import org.hibernate.annotations.FetchMode
@@ -16,7 +17,7 @@ data class StoreBranch(
         cascade = [CascadeType.ALL]
     )
     @JoinColumn(name = "StoreID")
-    var store: Store,
+    var store: Store?,
     @OneToMany(
         mappedBy = "storeBranch",
         fetch = FetchType.EAGER,
@@ -24,7 +25,7 @@ data class StoreBranch(
     )
     var employees: List<Employees> = emptyList(),
     @Column
-    var branchType:String,
+    var branchType:StoreBranchType,
     @Column
     var branchName:String,
     @Column

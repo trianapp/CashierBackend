@@ -1,18 +1,16 @@
 package app.trian.cashierservice.entity
 
-import com.fasterxml.jackson.annotation.JsonIgnore
+import org.apache.juli.logging.Log
 import javax.persistence.*
 
 @Entity
 @Table
-data class Role(
+data class ApiKey(
     @Id
     @GeneratedValue
-    var RoleID:Long,
+    var id:Long,
     @Column
-    var role:String,
-    @Column
-    val description:String,
+    var value:String,
     @Column
     var createdAt:Long,
     @Column

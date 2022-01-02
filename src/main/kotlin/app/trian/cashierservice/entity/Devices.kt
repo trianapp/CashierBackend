@@ -4,16 +4,15 @@ import javax.persistence.*
 
 @Entity
 @Table
-data class Payment(
+data class Devices(
     @Id
     @GeneratedValue
-    var PaymentID:Long,
-    @OneToOne
-    var order:Orders?,
+    var DeviceID:Long,
     @Column
-    var paymentMethod:String,
-    @Column
-    var amount:Double,
+    var mac:String,
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "StoreBranchID")
+    var storeBranch:StoreBranch?,
     @Column
     var createdAt:Long,
     @Column

@@ -9,7 +9,7 @@ data class ProductDetails(
     @GeneratedValue
     var ProductDetailID:Long,
     @OneToOne
-    var products: Products,
+    var products: Products?,
     @Column
     var htmlDescription:String,
     @Column
