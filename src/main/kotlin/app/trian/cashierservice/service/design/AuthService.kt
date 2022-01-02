@@ -16,7 +16,7 @@ import app.trian.cashierservice.model.response.UserResponse
 interface AuthService {
     fun login(request:LoginRequest):BaseResponse<UserResponse>
 
-    fun loginProvider(request:LoginRequest):BaseResponse<UserResponse>
+    fun loginProvider(uid: String):BaseResponse<UserResponse>
 
     fun register(request:RegisterRequest):BaseResponse<UserResponse>
 

@@ -1,5 +1,6 @@
 package app.trian.cashierservice.entity
 
+import app.trian.cashierservice.model.ProviderType
 import app.trian.cashierservice.model.UserType
 import javax.persistence.*
 
@@ -15,6 +16,8 @@ data class Users(
     )
     @JoinColumn(name = "RoleID")
     var role:Roles?,
+    @Column
+    var provider: ProviderType,
     @Column
     var uid:String,
     @Column

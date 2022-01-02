@@ -9,4 +9,10 @@ import org.springframework.data.repository.PagingAndSortingRepository
  * Created At 01/01/22 20.17
  */
 interface UsersRepository:PagingAndSortingRepository<Users,Long> {
+    fun findTopByUsernameAndPassword(username: String, password: String):Users?
+
+    fun findTopByUid(uid: String):Users?
+
+    fun findTopByUsername(username: String):Users?
+
 }
